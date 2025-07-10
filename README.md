@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/ai-agent-hub-ai-agent-marketplace-index-mcp-badge.png)](https://mseep.ai/app/ai-agent-hub-ai-agent-marketplace-index-mcp)
+
 # AI Agent Marketplace Index Search MCP Server
 
 ![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)
