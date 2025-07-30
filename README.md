@@ -4,6 +4,8 @@
 
 MCP Server for AI Agent Marketplace Index from DeepNLP, , allowing AI assistants to searches available AI agents Navigation Page function, tools or use cases by "keywords" or "category". such as find all the "AI coding agents", "GUI AI Agents", "Mobile Use Agent", "Desktop Use Agent", etc.
 
+[![MCPHub.com Badge](https://mcphub.com/api/mcp-servers/ai-agent-hub/ai-agent-marketplace-index-mcp/badge)](https://mcphub.com/mcp-servers/ai-agent-hub/ai-agent-marketplace-index-mcp)
+
 ## Features
 
 - Search AI Agents by query or category, find all available ai agents from the Agent Marketplace Index, such as "AI Coding", "HR AI Agents", "Finance AI Agent", "Healthcare AI Agent", "AI Agents Employees",etc.
