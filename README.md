@@ -1,2 +1,53 @@
 # onekey-gateway
 AI Agent Gateway to Commercial APIs, Skills, MCPs and more using just onekey for most benefits.
+
+This is an example of how onekey-gateway can help you and your AI agents to use commercial
+API,Skills and MCPs in one single gateway.
+
+```shell
+                   ┌─────────────┐
+                   │   Client    │
+                   │ (App / CLI) │
+                   └─────┬───────┘
+                         │
+                         ▼
+                ┌───────────────────┐
+                │ OneKey Gateway    │
+                │───────────────────│
+                │ • Authentication  │
+                │ • Security        │
+                │ • Billing/Quotas  │
+                │ • Rate Limiting   │
+                └─────┬─────────────┘
+                         │
+                         ▼
+                 ┌──────────────────┐
+                 │  OneKey Router   │
+                 ├──────────────────┤
+                 │ • Routes requests│
+                 │ • Load balances  │
+                 │ • Policy checks  │
+                 └─────┬────────────┘
+          ┌────────────┼────────────┐
+          ▼            ▼            ▼
+ ┌────────────────┐ ┌────────────────┐ ┌────────────────┐
+ │ Agent Router   │ │ MCP Router     │ │ LLM Router     │
+ │ (Agents /      │ │ (Tools / MCPs) │ │ (LLM Providers)│
+ │ Skills)        │ │                │ │                │
+ └─────┬──────────┘ └─────┬──────────┘ └─────┬──────────┘
+       │                  │                  │
+       ▼                  ▼                  ▼
+ ┌─────────────┐   ┌─────────────┐    ┌─────────────┐
+ │ Execution   │   │ Execution   │    │ Execution   │
+ │ Layer       │   │ Layer       │    │ Layer       │
+ │ • APIs      │   │ • MCP       │    │ • LLM       │
+ │ • Orchest   │   │Servers/Tools│    │ Providers   │
+ └─────┬───────┘   └─────┬───────┘    └─────┬───────┘
+       ▼                  ▼                  ▼
+ ┌──────────────────────────────────────────────┐
+ │           Provider APIs / External Services  │
+ │ • LLM APIs, SaaS tools, Databases, etc.     │
+ └──────────────────────────────────────────────┘
+```
+
+
