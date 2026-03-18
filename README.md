@@ -158,9 +158,9 @@ npx agtm add aiagenta2z/onekey-gateway --skill google-maps -g  ## install to glo
 ```
 `skills` package
 ```
-npx skills add https://github.com/aiagenta2z/onekey-agent-router
+npx skills add https://github.com/aiagenta2z/onekey-gateway
 ## single skill
-npx skills add https://github.com/aiagenta2z/onekey-agent-router --skill amap-maps-streamableHTTP
+npx skills add https://github.com/aiagenta2z/onekey-gateway --skill amap-maps-streamableHTTP
 ```
 
 ### OneKey MCP Config
