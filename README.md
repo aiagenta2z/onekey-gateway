@@ -72,7 +72,13 @@ API,Skills and MCPs in one single gateway.
 ### Install
 
 ```bash
-npm install @aiagenta2z/onekey-gateway
+npm -g install @aiagenta2z/onekey-gateway
+```
+
+Test installation if run onekey got `permission denied`, run from npx 
+
+```
+npx onekey
 ```
 
 ### OneKey Access Key
@@ -93,15 +99,14 @@ The CLI reads the access key from `DEEPNLP_ONEKEY_ROUTER_ACCESS`. If not set, it
 
 ## Quickstart 
 
-### OneKey CLI
+### OneKey Gateway CLI
 
 #### Example 1: Google Maps 
 Your Agent will search Google Maps to find places, rankings, etc. 
 prompt: New York City Italian Restaurants
 
 ```bash
-
-onekey agent google-maps/google-maps maps_search_places '{"query":"New York City Italian Restaurants"}'
+npx onekey agent google-maps/google-maps maps_search_places '{"query":"New York City Italian Restaurants"}'
 ```
 Result
 ```shell
@@ -116,7 +121,7 @@ model:
 - gemini-2.5-flash-image
 
 ```
-onekey agent gemini-nano-banana/gemini-nano-banana generate_image_gemini '{"model":"gemini-2.5-flash-image", "prompt":"Generate a minecraft scene of steve fighting zombies in purple crystal fields."}'
+npx onekey agent gemini-nano-banana/gemini-nano-banana generate_image_gemini '{"model":"gemini-2.5-flash-image", "prompt":"Generate a minecraft scene of steve fighting zombies in purple crystal fields."}'
 ```
 
 ```
@@ -131,7 +136,9 @@ https://us-static.aiagenta2z.com/local/files-wd/user_2177/7629e198-b10c-4a8b-8f6
 
 ## Tutorial
 
-### CLI Usage
+## 1. OneKey Agent Router Usage
+
+### **CLI**
 ```bash
 onekey agent <unique_id> <api_id> <data_json|@file>
 onekey mcp <server_name> [--name config_name]
@@ -141,21 +148,17 @@ onekey llm --payload <json|@file>
 
 Supported ids can be found in the table below.
 
-### OneKey Agent API
+### **Skills**
 
-**CLI**
+You can download skills (wrapper of OneKey Gateway in CLI with SKILL.md) to your local agents, such as claude code, codex, gemini, openclaw.
 
+`agtm` package to download skills
 ```bash
-onekey agent google-maps/google-maps maps_search_places '{"query":"New York City Italian Restaurants"}'
+npx agtm skills add https://github.com/aiagenta2z/onekey-gateway      ## add all onekey router skills
+npx agtm skills add aiagenta2z/onekey-gateway --skill google-maps -g  ## install to global path
+npx agtm skills add aiagenta2z/onekey-gateway --skill gemini-nano-banana
 ```
 
-**Skills**
-
-`agtm` package
-```bash
-npx agtm add https://github.com/aiagenta2z/onekey-gateway  ## add all onekey router skills
-npx agtm add aiagenta2z/onekey-gateway --skill google-maps -g  ## install to global path
-```
 `skills` package
 ```
 npx skills add https://github.com/aiagenta2z/onekey-gateway
@@ -163,10 +166,31 @@ npx skills add https://github.com/aiagenta2z/onekey-gateway
 npx skills add https://github.com/aiagenta2z/onekey-gateway --skill amap-maps-streamableHTTP
 ```
 
-### OneKey MCP Config
+### **API**
+
+Set env variable and use curl to get Agent APIs of Google maps
+
+```
+export DEEPNLP_ONEKEY_ROUTER_ACCESS=your_access_key
+curl -v -X POST "https://agent.deepnlp.org/agent_router" \
+  -H "Content-Type: application/json" \
+  -H "X-OneKey: $DEEPNLP_ONEKEY_ROUTER_ACCESS" \
+  -d '{"unique_id":"google-maps/google-maps","api_id":"maps_geocode","data":{"address": "Times Square, New York"}}'
+```
+
+
+
+## 2. OneKey MCP Router
+
+### **CLI**
+```bash
+onekey mcp <server_name> [--name config_name]
+```
+
+Use `onekey mcp` cli to generate the mcp config and copy paste to your clients.
 
 ```bash
-onekey mcp google-maps
+npx onekey mcp google-maps
 ```
 Put below config into your clients
 ```shell
@@ -179,13 +203,21 @@ Put below config into your clients
 }
 ```
 
-### OneKey LLM Router
-Call Gemini 3 LLM and Image Nano Banana model
+## 3. OneKey LLM Router
+Call LLM API, such as Gemini 3 Flash Models, Image Generation Model Nano Banana
+
+### **CLI**
 ```bash
-onekey llm --provider gemini --model gemini-3-flash-preview --messages @messages.json --temperature 0.7 --response-format json
+onekey llm --provider <provider> --model <model> --messages <json|@file> [--temperature <num>] [--response-format <format>] [--options <json|@file>]
+onekey llm --payload <json|@file>
 ```
 
-## Gateway Categories
+```bash
+npx onekey llm --provider gemini --model gemini-3-flash-preview --messages @messages.json --temperature 0.7 --response-format json
+```
+
+
+## Gateway Support Summary
 
 | Domain               | Unique Id                                                                                          | Skill ID                 | API ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | 
 |----------------------|----------------------------------------------------------------------------------------------------|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -207,7 +239,7 @@ onekey llm --provider gemini --model gemini-3-flash-preview --messages @messages
 #### Example 1: Google Maps Search
 
 ```bash
-onekey agent google-maps/google-maps maps_search_places '{"query":"New York City Italian Restaurants"}'
+npx onekey agent google-maps/google-maps maps_search_places '{"query":"New York City Italian Restaurants"}'
 ```
 
 ```bash
@@ -241,5 +273,56 @@ https://us-static.aiagenta2z.com/local/files-wd/user_2177/7629e198-b10c-4a8b-8f6
 ```
 
 
+## Support Agents
+
+### Claude Code
+
+<details>
+<summary>Onekey Gateway Usage</summary>
+
+```shell
+npx agtm skills add https://github.com/aiagenta2z/onekey-gateway -a claude-code
+claude
+> Use Nano Banana to Generate an Image of academic poster of the project
+> Search top italian restaurants and add to calendars.
+```
+
+</details>
+
+### Codex
+<details>
+<summary>Onekey Gateway Usage</summary>
+
+```shell
+npx agtm skills add https://github.com/aiagenta2z/onekey-gateway -a codex
+codex
+> Use Nano Banana to Generate an Image of academic poster of the project
+> Search top italian restaurants and add to calendars.
+```
+
+</details>
+
+### Gemini-CLI
+<details>
+<summary>Onekey Gateway Usage</summary>
+
+```shell
+npx agtm skills add https://github.com/aiagenta2z/onekey-gateway -a gemini-cli
+gemini
+> Use Nano Banana to Generate an Image of academic poster of the project
+> Search top italian restaurants in New York city and add to calendars.
+```
+
+</details>
+
+
 ### Related
+[OneKey Gateway Documentation](https://www.deepnlp.org/doc/onekey_gateway)   
+[AI Agent Marketplace](https://www.deepnlp.org/store/ai-agent)   
+[GitHub Agtm](https://github.com/aiagenta2z/agtm)   
+[Submit AI Agent](https://www.deepnlp.org/workspace/my_ai_services)
+[Agent Infra Deployment](https://www.deepnlp.org/workspace/deploy)  
+[A2Z Payment SDK](https://www.deepnlp.org/agent/agent-a2z-payment)
+
+
 
