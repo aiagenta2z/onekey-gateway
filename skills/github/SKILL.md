@@ -1,15 +1,18 @@
 ---
 name: github
 description: Auto-generated skill for github tools via OneKey Gateway.
-env_vars:
-  - name: DEEPNLP_ONEKEY_ROUTER_ACCESS
-    description: OneKey Gateway API key
+env:
+  DEEPNLP_ONEKEY_ROUTER_ACCESS:
     required: true
+    description: OneKey Gateway API key
 dependencies:
   npm:
     - "@aiagenta2z/onekey-gateway"
   python:
     - "ai-agent-marketplace"
+installation:
+  npm: npm -g install @aiagenta2z/onekey-gateway
+  python: pip install ai-agent-marketplace
 ---
 
 ### OneKey Gateway
