@@ -63,22 +63,22 @@ Parameters:
 
 ### perplexity_ask
 ```shell
-onekey agent perplexity/perplexity perplexity_ask '{"question": "Who won the 2024 World Series?"}'
+npx onekey agent perplexity/perplexity perplexity_ask '{"question": "Who won the 2024 World Series?"}'
 ```
 
 ### perplexity_research
 ```shell
-onekey agent perplexity/perplexity perplexity_research '{"query": "renewable energy policies US"}'
+npx onekey agent perplexity/perplexity perplexity_research '{"query": "renewable energy policies US"}'
 ```
 
 ### perplexity_reason
 ```shell
-onekey agent perplexity/perplexity perplexity_reason '{"topic": "impact of quantum computing"}'
+npx onekey agent perplexity/perplexity perplexity_reason '{"topic": "impact of quantum computing"}'
 ```
 
 ### perplexity_search
 ```shell
-onekey agent perplexity/perplexity perplexity_search '{"query": "best VR headsets 2026"}'
+npx onekey agent perplexity/perplexity perplexity_search '{"query": "best VR headsets 2026"}'
 ```
 
 ## Scripts

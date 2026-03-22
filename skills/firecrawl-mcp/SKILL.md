@@ -608,62 +608,62 @@ Parameters:
 
 ### firecrawl_scrape
 ```shell
-onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_scrape '{"url": "https://example.com/api-docs", "formats": ["json"], "onlyMainContent": true}'
+npx onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_scrape '{"url": "https://example.com/api-docs", "formats": ["json"], "onlyMainContent": true}'
 ```
 
 ### firecrawl_map
 ```shell
-onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_map '{"query": "webhook"}'
+npx onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_map '{"query": "webhook"}'
 ```
 
 ### firecrawl_search
 ```shell
-onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_search '{"query": "product pricing site:example.com"}'
+npx onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_search '{"query": "product pricing site:example.com"}'
 ```
 
 ### firecrawl_crawl
 ```shell
-onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_crawl '{"url": "https://example.com"}'
+npx onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_crawl '{"url": "https://example.com"}'
 ```
 
 ### firecrawl_check_crawl_status
 ```shell
-onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_check_crawl_status '{"crawl_id": "crawl-123"}'
+npx onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_check_crawl_status '{"crawl_id": "crawl-123"}'
 ```
 
 ### firecrawl_extract
 ```shell
-onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_extract '{"url": "https://example.com", "selector": "h1"}'
+npx onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_extract '{"url": "https://example.com", "selector": "h1"}'
 ```
 
 ### firecrawl_agent
 ```shell
-onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_agent '{"task": "find pricing", "url": "https://example.com"}'
+npx onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_agent '{"task": "find pricing", "url": "https://example.com"}'
 ```
 
 ### firecrawl_agent_status
 ```shell
-onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_agent_status '{"job_id": "job-123"}'
+npx onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_agent_status '{"job_id": "job-123"}'
 ```
 
 ### firecrawl_browser_create
 ```shell
-onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_browser_create '{"profile": "default"}'
+npx onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_browser_create '{"profile": "default"}'
 ```
 
 ### firecrawl_browser_execute
 ```shell
-onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_browser_execute '{"browser_id": "browser-1", "script": "document.title"}'
+npx onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_browser_execute '{"browser_id": "browser-1", "script": "document.title"}'
 ```
 
 ### firecrawl_browser_delete
 ```shell
-onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_browser_delete '{"browser_id": "browser-1"}'
+npx onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_browser_delete '{"browser_id": "browser-1"}'
 ```
 
 ### firecrawl_browser_list
 ```shell
-onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_browser_list '{}'
+npx onekey agent firecrawl-mcp/firecrawl-mcp firecrawl_browser_list '{}'
 ```
 
 ## Scripts

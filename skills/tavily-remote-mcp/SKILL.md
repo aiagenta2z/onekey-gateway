@@ -86,27 +86,27 @@ Parameters:
 
 ### tavily_search
 ```shell
-onekey agent tavily-remote-mcp/tavily-remote-mcp tavily_search '{"query": "NVIDIA earnings", "max_results": 5, "search_depth": "advanced"}'
+npx onekey agent tavily-remote-mcp/tavily-remote-mcp tavily_search '{"query": "NVIDIA earnings", "max_results": 5, "search_depth": "advanced"}'
 ```
 
 ### tavily_extract
 ```shell
-onekey agent tavily-remote-mcp/tavily-remote-mcp tavily_extract '{"urls": ["https://example.com/article"], "extract_depth": "advanced", "format": "markdown"}'
+npx onekey agent tavily-remote-mcp/tavily-remote-mcp tavily_extract '{"urls": ["https://example.com/article"], "extract_depth": "advanced", "format": "markdown"}'
 ```
 
 ### tavily_crawl
 ```shell
-onekey agent tavily-remote-mcp/tavily-remote-mcp tavily_crawl '{"url": "https://example.com", "max_depth": 1, "max_breadth": 10, "limit": 20}'
+npx onekey agent tavily-remote-mcp/tavily-remote-mcp tavily_crawl '{"url": "https://example.com", "max_depth": 1, "max_breadth": 10, "limit": 20}'
 ```
 
 ### tavily_map
 ```shell
-onekey agent tavily-remote-mcp/tavily-remote-mcp tavily_map '{"url": "https://example.com/docs", "max_depth": 1, "max_breadth": 10, "limit": 30}'
+npx onekey agent tavily-remote-mcp/tavily-remote-mcp tavily_map '{"url": "https://example.com/docs", "max_depth": 1, "max_breadth": 10, "limit": 30}'
 ```
 
 ### tavily_research
 ```shell
-onekey agent tavily-remote-mcp/tavily-remote-mcp tavily_research '{"input": "Impact of AI on healthcare", "model": "pro"}'
+npx onekey agent tavily-remote-mcp/tavily-remote-mcp tavily_research '{"input": "Impact of AI on healthcare", "model": "pro"}'
 ```
 
 ## Scripts

@@ -82,27 +82,27 @@ Parameters:
 
 ### generate_image_gemini
 ```shell
-onekey agent gemini-nano-banana/gemini-nano-banana generate_image_gemini '{"model": "gemini-2.5-flash-image", "prompt": "sunrise over mountains", "aspect_ratio": "16:9", "image_size": "1K"}'
+npx onekey agent gemini-nano-banana/gemini-nano-banana generate_image_gemini '{"model": "gemini-2.5-flash-image", "prompt": "sunrise over mountains", "aspect_ratio": "16:9", "image_size": "1K"}'
 ```
 
 ### generate_image_nano_banana
 ```shell
-onekey agent gemini-nano-banana/gemini-nano-banana generate_image_nano_banana '{"model": "gemini-2.5-flash-image", "prompt": "robot reading book", "aspect_ratio": "16:9", "image_size": "1K"}'
+npx onekey agent gemini-nano-banana/gemini-nano-banana generate_image_nano_banana '{"model": "gemini-2.5-flash-image", "prompt": "robot reading book", "aspect_ratio": "16:9", "image_size": "1K"}'
 ```
 
 ### generate_image_nano_banana_with_reference
 ```shell
-onekey agent gemini-nano-banana/gemini-nano-banana generate_image_nano_banana_with_reference '{"model": "gemini-3-pro-image-preview", "prompt": "winter coat style", "images": ["https://avatars.githubusercontent.com/u/242328252"], "aspect_ratio": "1:1"}'
+npx onekey agent gemini-nano-banana/gemini-nano-banana generate_image_nano_banana_with_reference '{"model": "gemini-3-pro-image-preview", "prompt": "winter coat style", "images": ["https://avatars.githubusercontent.com/u/242328252"], "aspect_ratio": "1:1"}'
 ```
 
 ### ocr_extract_text_from_image
 ```shell
-onekey agent gemini-nano-banana/gemini-nano-banana ocr_extract_text_from_image '{"images": ["https://avatars.githubusercontent.com/u/242328252"], "model": "gemini-3-flash-preview"}'
+npx onekey agent gemini-nano-banana/gemini-nano-banana ocr_extract_text_from_image '{"images": ["https://avatars.githubusercontent.com/u/242328252"], "model": "gemini-3-flash-preview"}'
 ```
 
 ### list_items_from_image
 ```shell
-onekey agent gemini-nano-banana/gemini-nano-banana list_items_from_image '{"images": ["https://avatars.githubusercontent.com/u/242328252"], "model": "gemini-3-flash-preview", "output_json": true}'
+npx onekey agent gemini-nano-banana/gemini-nano-banana list_items_from_image '{"images": ["https://avatars.githubusercontent.com/u/242328252"], "model": "gemini-3-flash-preview", "output_json": true}'
 ```
 
 ## Scripts

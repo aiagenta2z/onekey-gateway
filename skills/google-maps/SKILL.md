@@ -116,37 +116,37 @@ Parameters:
 
 ### maps_geocode
 ```shell
-onekey agent google-maps/google-maps maps_geocode '{"address": "Times Square, New York"}'
+npx onekey agent google-maps/google-maps maps_geocode '{"address": "Times Square, New York"}'
 ```
 
 ### maps_reverse_geocode
 ```shell
-onekey agent google-maps/google-maps maps_reverse_geocode '{"latitude": 40.758, "longitude": -73.9855}'
+npx onekey agent google-maps/google-maps maps_reverse_geocode '{"latitude": 40.758, "longitude": -73.9855}'
 ```
 
 ### maps_search_places
 ```shell
-onekey agent google-maps/google-maps maps_search_places '{"query": "Italian restaurants", "location": {"latitude": 40.758, "longitude": -73.9855}, "radius": 500}'
+npx onekey agent google-maps/google-maps maps_search_places '{"query": "Italian restaurants", "location": {"latitude": 40.758, "longitude": -73.9855}, "radius": 500}'
 ```
 
 ### maps_place_details
 ```shell
-onekey agent google-maps/google-maps maps_place_details '{"place_id": "ChIJmQJIxlVYwokRLgeuocVOGVU"}'
+npx onekey agent google-maps/google-maps maps_place_details '{"place_id": "ChIJmQJIxlVYwokRLgeuocVOGVU"}'
 ```
 
 ### maps_distance_matrix
 ```shell
-onekey agent google-maps/google-maps maps_distance_matrix '{"origins": ["Times Square, NY"], "destinations": ["Central Park, NY"], "mode": "driving"}'
+npx onekey agent google-maps/google-maps maps_distance_matrix '{"origins": ["Times Square, NY"], "destinations": ["Central Park, NY"], "mode": "driving"}'
 ```
 
 ### maps_elevation
 ```shell
-onekey agent google-maps/google-maps maps_elevation '{"locations": [{"latitude": 36.057944, "longitude": -112.125168}]}'
+npx onekey agent google-maps/google-maps maps_elevation '{"locations": [{"latitude": 36.057944, "longitude": -112.125168}]}'
 ```
 
 ### maps_directions
 ```shell
-onekey agent google-maps/google-maps maps_directions '{"origin": "Golden Gate Bridge", "destination": "Ferry Building San Francisco", "mode": "driving"}'
+npx onekey agent google-maps/google-maps maps_directions '{"origin": "Golden Gate Bridge", "destination": "Ferry Building San Francisco", "mode": "driving"}'
 ```
 
 

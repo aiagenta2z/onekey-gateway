@@ -492,137 +492,137 @@ Parameters:
 
 ### generate_area_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_area_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_area_chart '{}'
 ```
 
 ### generate_bar_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_bar_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_bar_chart '{}'
 ```
 
 ### generate_boxplot_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_boxplot_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_boxplot_chart '{}'
 ```
 
 ### generate_column_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_column_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_column_chart '{}'
 ```
 
 ### generate_district_map
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_district_map '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_district_map '{}'
 ```
 
 ### generate_dual_axes_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_dual_axes_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_dual_axes_chart '{}'
 ```
 
 ### generate_fishbone_diagram
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_fishbone_diagram '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_fishbone_diagram '{}'
 ```
 
 ### generate_flow_diagram
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_flow_diagram '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_flow_diagram '{}'
 ```
 
 ### generate_funnel_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_funnel_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_funnel_chart '{}'
 ```
 
 ### generate_histogram_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_histogram_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_histogram_chart '{}'
 ```
 
 ### generate_line_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_line_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_line_chart '{}'
 ```
 
 ### generate_liquid_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_liquid_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_liquid_chart '{}'
 ```
 
 ### generate_mind_map
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_mind_map '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_mind_map '{}'
 ```
 
 ### generate_network_graph
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_network_graph '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_network_graph '{}'
 ```
 
 ### generate_organization_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_organization_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_organization_chart '{}'
 ```
 
 ### generate_path_map
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_path_map '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_path_map '{}'
 ```
 
 ### generate_pie_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_pie_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_pie_chart '{}'
 ```
 
 ### generate_pin_map
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_pin_map '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_pin_map '{}'
 ```
 
 ### generate_radar_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_radar_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_radar_chart '{}'
 ```
 
 ### generate_sankey_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_sankey_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_sankey_chart '{}'
 ```
 
 ### generate_scatter_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_scatter_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_scatter_chart '{}'
 ```
 
 ### generate_treemap_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_treemap_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_treemap_chart '{}'
 ```
 
 ### generate_venn_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_venn_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_venn_chart '{}'
 ```
 
 ### generate_violin_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_violin_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_violin_chart '{}'
 ```
 
 ### generate_waterfall_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_waterfall_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_waterfall_chart '{}'
 ```
 
 ### generate_word_cloud_chart
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_word_cloud_chart '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_word_cloud_chart '{}'
 ```
 
 ### generate_spreadsheet
 ```shell
-onekey agent mcp-server-chart/mcp-server-chart generate_spreadsheet '{}'
+npx onekey agent mcp-server-chart/mcp-server-chart generate_spreadsheet '{}'
 ```
 
 ## Scripts

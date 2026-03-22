@@ -67,12 +67,12 @@ Parameters:
 
 ### search_images
 ```shell
-onekey agent bing-image-search-mcp/bing-image-search-mcp search_images '{"query": "Eiffel Tower sunset", "limit": 5}'
+npx onekey agent bing-image-search-mcp/bing-image-search-mcp search_images '{"query": "Eiffel Tower sunset", "limit": 5}'
 ```
 
 ### search_images_batch
 ```shell
-onekey agent bing-image-search-mcp/bing-image-search-mcp search_images_batch '{"query_list": ["Eiffel Tower sunset", "Louvre at night"], "limit": 3}'
+npx onekey agent bing-image-search-mcp/bing-image-search-mcp search_images_batch '{"query_list": ["Eiffel Tower sunset", "Louvre at night"], "limit": 3}'
 ```
 
 ## Scripts

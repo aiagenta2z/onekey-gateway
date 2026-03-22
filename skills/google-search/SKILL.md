@@ -40,7 +40,7 @@ Parameters:
 
 ### google_search
 ```shell
-onekey agent google-search/google-search google_search '{"query": "US inflation rate February 2026", "num": 5, "start": 0}'
+npx onekey agent google-search/google-search google_search '{"query": "US inflation rate February 2026", "num": 5, "start": 0}'
 ```
 
 ## Scripts

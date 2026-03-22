@@ -421,197 +421,197 @@ Parameters:
 
 ### add_comment_to_pending_review
 ```shell
-onekey agent github/github add_comment_to_pending_review '{}'
+npx onekey agent github/github add_comment_to_pending_review '{}'
 ```
 
 ### add_issue_comment
 ```shell
-onekey agent github/github add_issue_comment '{}'
+npx onekey agent github/github add_issue_comment '{}'
 ```
 
 ### create_branch
 ```shell
-onekey agent github/github create_branch '{}'
+npx onekey agent github/github create_branch '{}'
 ```
 
 ### create_or_update_file
 ```shell
-onekey agent github/github create_or_update_file '{}'
+npx onekey agent github/github create_or_update_file '{}'
 ```
 
 ### create_pull_request
 ```shell
-onekey agent github/github create_pull_request '{}'
+npx onekey agent github/github create_pull_request '{}'
 ```
 
 ### create_repository
 ```shell
-onekey agent github/github create_repository '{}'
+npx onekey agent github/github create_repository '{}'
 ```
 
 ### delete_file
 ```shell
-onekey agent github/github delete_file '{}'
+npx onekey agent github/github delete_file '{}'
 ```
 
 ### fork_repository
 ```shell
-onekey agent github/github fork_repository '{}'
+npx onekey agent github/github fork_repository '{}'
 ```
 
 ### get_commit
 ```shell
-onekey agent github/github get_commit '{}'
+npx onekey agent github/github get_commit '{}'
 ```
 
 ### get_file_contents
 ```shell
-onekey agent github/github get_file_contents '{}'
+npx onekey agent github/github get_file_contents '{}'
 ```
 
 ### get_label
 ```shell
-onekey agent github/github get_label '{}'
+npx onekey agent github/github get_label '{}'
 ```
 
 ### get_latest_release
 ```shell
-onekey agent github/github get_latest_release '{}'
+npx onekey agent github/github get_latest_release '{}'
 ```
 
 ### get_me
 ```shell
-onekey agent github/github get_me '{}'
+npx onekey agent github/github get_me '{}'
 ```
 
 ### get_release_by_tag
 ```shell
-onekey agent github/github get_release_by_tag '{}'
+npx onekey agent github/github get_release_by_tag '{}'
 ```
 
 ### get_tag
 ```shell
-onekey agent github/github get_tag '{}'
+npx onekey agent github/github get_tag '{}'
 ```
 
 ### get_team_members
 ```shell
-onekey agent github/github get_team_members '{}'
+npx onekey agent github/github get_team_members '{}'
 ```
 
 ### get_teams
 ```shell
-onekey agent github/github get_teams '{}'
+npx onekey agent github/github get_teams '{}'
 ```
 
 ### issue_read
 ```shell
-onekey agent github/github issue_read '{}'
+npx onekey agent github/github issue_read '{}'
 ```
 
 ### issue_write
 ```shell
-onekey agent github/github issue_write '{}'
+npx onekey agent github/github issue_write '{}'
 ```
 
 ### list_branches
 ```shell
-onekey agent github/github list_branches '{}'
+npx onekey agent github/github list_branches '{}'
 ```
 
 ### list_commits
 ```shell
-onekey agent github/github list_commits '{}'
+npx onekey agent github/github list_commits '{}'
 ```
 
 ### list_issue_types
 ```shell
-onekey agent github/github list_issue_types '{}'
+npx onekey agent github/github list_issue_types '{}'
 ```
 
 ### list_issues
 ```shell
-onekey agent github/github list_issues '{}'
+npx onekey agent github/github list_issues '{}'
 ```
 
 ### list_pull_requests
 ```shell
-onekey agent github/github list_pull_requests '{}'
+npx onekey agent github/github list_pull_requests '{}'
 ```
 
 ### list_releases
 ```shell
-onekey agent github/github list_releases '{}'
+npx onekey agent github/github list_releases '{}'
 ```
 
 ### list_tags
 ```shell
-onekey agent github/github list_tags '{}'
+npx onekey agent github/github list_tags '{}'
 ```
 
 ### merge_pull_request
 ```shell
-onekey agent github/github merge_pull_request '{}'
+npx onekey agent github/github merge_pull_request '{}'
 ```
 
 ### pull_request_read
 ```shell
-onekey agent github/github pull_request_read '{}'
+npx onekey agent github/github pull_request_read '{}'
 ```
 
 ### pull_request_review_write
 ```shell
-onekey agent github/github pull_request_review_write '{}'
+npx onekey agent github/github pull_request_review_write '{}'
 ```
 
 ### push_files
 ```shell
-onekey agent github/github push_files '{}'
+npx onekey agent github/github push_files '{}'
 ```
 
 ### request_copilot_review
 ```shell
-onekey agent github/github request_copilot_review '{}'
+npx onekey agent github/github request_copilot_review '{}'
 ```
 
 ### search_code
 ```shell
-onekey agent github/github search_code '{}'
+npx onekey agent github/github search_code '{}'
 ```
 
 ### search_issues
 ```shell
-onekey agent github/github search_issues '{}'
+npx onekey agent github/github search_issues '{}'
 ```
 
 ### search_pull_requests
 ```shell
-onekey agent github/github search_pull_requests '{}'
+npx onekey agent github/github search_pull_requests '{}'
 ```
 
 ### search_repositories
 ```shell
-onekey agent github/github search_repositories '{}'
+npx onekey agent github/github search_repositories '{}'
 ```
 
 ### search_users
 ```shell
-onekey agent github/github search_users '{}'
+npx onekey agent github/github search_users '{}'
 ```
 
 ### sub_issue_write
 ```shell
-onekey agent github/github sub_issue_write '{}'
+npx onekey agent github/github sub_issue_write '{}'
 ```
 
 ### update_pull_request
 ```shell
-onekey agent github/github update_pull_request '{}'
+npx onekey agent github/github update_pull_request '{}'
 ```
 
 ### update_pull_request_branch
 ```shell
-onekey agent github/github update_pull_request_branch '{}'
+npx onekey agent github/github update_pull_request_branch '{}'
 ```
 
 ## Scripts

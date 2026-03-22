@@ -143,77 +143,77 @@ Parameters:
 
 ### maps_direction_bicycling
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_direction_bicycling '{"origin": "116.481028,39.989643", "destination": "116.465302,40.004717"}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_direction_bicycling '{"origin": "116.481028,39.989643", "destination": "116.465302,40.004717"}'
 ```
 
 ### maps_direction_driving
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_direction_driving '{"origin": "116.481028,39.989643", "destination": "116.465302,40.004717"}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_direction_driving '{"origin": "116.481028,39.989643", "destination": "116.465302,40.004717"}'
 ```
 
 ### maps_direction_transit_integrated
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_direction_transit_integrated '{"origin": "116.481028,39.989643", "destination": "116.465302,40.004717", "city": "北京", "cityd": "上海"}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_direction_transit_integrated '{"origin": "116.481028,39.989643", "destination": "116.465302,40.004717", "city": "北京", "cityd": "上海"}'
 ```
 
 ### maps_direction_walking
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_direction_walking '{"origin": "116.481028,39.989643", "destination": "116.465302,40.004717"}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_direction_walking '{"origin": "116.481028,39.989643", "destination": "116.465302,40.004717"}'
 ```
 
 ### maps_distance
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_distance '{"origins": "116.481028,39.989643|116.465302,40.004717", "destination": "116.481028,39.989643", "type": "1"}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_distance '{"origins": "116.481028,39.989643|116.465302,40.004717", "destination": "116.481028,39.989643", "type": "1"}'
 ```
 
 ### maps_geo
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_geo '{"address": "Beijing Capital Airport", "city": "北京"}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_geo '{"address": "Beijing Capital Airport", "city": "北京"}'
 ```
 
 ### maps_regeocode
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_regeocode '{"location": "116.481488,39.990464"}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_regeocode '{"location": "116.481488,39.990464"}'
 ```
 
 ### maps_ip_location
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_ip_location '{"ip": "8.8.8.8"}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_ip_location '{"ip": "8.8.8.8"}'
 ```
 
 ### maps_schema_personal_map
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_schema_personal_map '{"orgName": "Weekend Trip", "lineList": [{"title": "Day1", "pointInfoList": [{"name": "Tiananmen", "lon": 116.3975, "lat": 39.9087, "poiId": "B000A8UIN8"}]}]}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_schema_personal_map '{"orgName": "Weekend Trip", "lineList": [{"title": "Day1", "pointInfoList": [{"name": "Tiananmen", "lon": 116.3975, "lat": 39.9087, "poiId": "B000A8UIN8"}]}]}'
 ```
 
 ### maps_around_search
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_around_search '{"keywords": "coffee", "location": "116.481488,39.990464", "radius": "2000"}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_around_search '{"keywords": "coffee", "location": "116.481488,39.990464", "radius": "2000"}'
 ```
 
 ### maps_search_detail
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_search_detail '{"id": "B0FFFABCD1"}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_search_detail '{"id": "B0FFFABCD1"}'
 ```
 
 ### maps_text_search
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_text_search '{"keywords": "Tsinghua University", "city": "北京", "citylimit": true}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_text_search '{"keywords": "Tsinghua University", "city": "北京", "citylimit": true}'
 ```
 
 ### maps_schema_navi
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_schema_navi '{"lon": "116.3975", "lat": "39.9087"}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_schema_navi '{"lon": "116.3975", "lat": "39.9087"}'
 ```
 
 ### maps_schema_take_taxi
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_schema_take_taxi '{"slon": "116.3975", "slat": "39.9087", "sname": "Tiananmen", "dlon": "116.481028", "dlat": "39.989643", "dname": "Sanlitun"}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_schema_take_taxi '{"slon": "116.3975", "slat": "39.9087", "sname": "Tiananmen", "dlon": "116.481028", "dlat": "39.989643", "dname": "Sanlitun"}'
 ```
 
 ### maps_weather
 ```shell
-onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_weather '{"city": "北京"}'
+npx onekey agent amap-maps-streamableHTTP/amap-maps-streamableHTTP maps_weather '{"city": "北京"}'
 ```
 
 ## Scripts

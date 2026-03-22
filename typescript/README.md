@@ -134,9 +134,6 @@ https://us-static.aiagenta2z.com/local/files-wd/user_2177/7629e198-b10c-4a8b-8f6
 ### CLI Usage
 ```bash
 onekey agent <unique_id> <api_id> <data_json|@file>
-onekey mcp <server_name> [--name config_name]
-onekey llm --provider <provider> --model <model> --messages <json|@file> [--temperature <num>] [--response-format <format>] [--options <json|@file>]
-onekey llm --payload <json|@file>
 ```
 
 Supported ids can be found in the table below.
@@ -161,6 +158,12 @@ npx agtm add aiagenta2z/onekey-gateway --skill google-maps -g  ## install to glo
 npx skills add https://github.com/aiagenta2z/onekey-agent-router
 ## single skill
 npx skills add https://github.com/aiagenta2z/onekey-agent-router --skill amap-maps-streamableHTTP
+```
+
+Run onekey skills with hint
+```bash
+npx agtm run nano # -> guide you through gemini-nano-banana tools
+npx agtm run nano aiagenta2z/onekey-gateway nano # -> Find the cli of generation or generation with reference images
 ```
 
 ### OneKey MCP Config

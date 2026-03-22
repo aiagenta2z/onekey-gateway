@@ -41,12 +41,12 @@ Parameters:
 
 ### brave_web_search
 ```shell
-onekey agent brave-search/brave-search brave_web_search '{"query": "latest AI research 2026"}'
+npx onekey agent brave-search/brave-search brave_web_search '{"query": "latest AI research 2026"}'
 ```
 
 ### brave_local_search
 ```shell
-onekey agent brave-search/brave-search brave_local_search '{"query": "coffee near Times Square"}'
+npx onekey agent brave-search/brave-search brave_local_search '{"query": "coffee near Times Square"}'
 ```
 
 ## Scripts
