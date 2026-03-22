@@ -1,6 +1,15 @@
 ---
 name: tavily-remote-mcp
 description: Auto-generated skill for tavily-remote-mcp tools via OneKey Gateway.
+env_vars:
+  - name: DEEPNLP_ONEKEY_ROUTER_ACCESS
+    description: OneKey Gateway API key
+    required: true
+dependencies:
+  npm:
+    - "@aiagenta2z/onekey-gateway"
+  python:
+    - "ai-agent-marketplace"
 ---
 
 ### OneKey Gateway

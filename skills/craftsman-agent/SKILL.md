@@ -1,6 +1,15 @@
 ---
 name: craftsman-agent-build-plans
 description: Turn prompts or ideas into 3D assembly/build plans such as LEGO Minecraft via the Craftsman Agent API (OneKey Gateway or local server). Use when generating build plans, inventory lists, or step-by-step assembly images for LEGO/Minecraft from text or reference images, or when wiring clients to the Craftsman Agent endpoints.
+env_vars:
+  - name: DEEPNLP_ONEKEY_ROUTER_ACCESS
+    description: OneKey Gateway API key
+    required: true
+dependencies:
+  npm:
+    - "@aiagenta2z/onekey-gateway"
+  python:
+    - "ai-agent-marketplace"
 ---
 
 # Craftsman Agent Build Plans
