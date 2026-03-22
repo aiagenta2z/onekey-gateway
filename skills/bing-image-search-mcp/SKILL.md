@@ -20,7 +20,7 @@ Common settings:
 - `api_id`: one of the tools listed below
 ## Tools
 ### `search_images`
-Get Public Available Stock Symbols from Global Marketplace
+Search Images
 
         Args:
             query: str, query used in Bing search engine

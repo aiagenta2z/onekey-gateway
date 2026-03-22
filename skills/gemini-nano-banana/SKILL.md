@@ -1,6 +1,10 @@
 ---
 name: gemini-nano-banana
 description: Auto-generated skill for gemini tools via OneKey Gateway.
+env_vars:
+  - name: DEEPNLP_ONEKEY_ROUTER_ACCESS
+    description: OneKey Gateway API key
+    required: true
 ---
 
 ### OneKey Gateway
@@ -14,7 +18,6 @@ Set your OneKey access key:
 ```bash
 export DEEPNLP_ONEKEY_ROUTER_ACCESS=YOUR_API_KEY
 ```
-If no key is provided, the scripts fall back to the demo key `BETA_TEST_KEY_MARCH_2026`.
 Common settings:
 - `unique_id`: `gemini/gemini`
 - `api_id`: one of the tools listed below
@@ -34,7 +37,7 @@ Generates an image using the Gemini Image API.
             model: The image generation model to use (see supported models above). Defaults to "gemini-2.5-flash-image". Supports: 'gemini-3-flash', 'gemini-3-pro-image-preview', 'gemini-2.5-flash-image'
             prompt: A detailed text description for the image to be generated.
             image_name: The filename for the output image, can be a relative path. Defaults to "gemini_output_images.png".
-            output_folder: The optional folder path where the image will be saved (use the user's personal directory). If None, uses a server default.
+            output_folder: The optional absolute folder path provided by the user where the image will be saved. Do not use default server locations.
             aspect_ratio: The aspect ratio of the generated image (e.g., '16:9', '1:1', '4:3'). Defaults to '16:9'.
             image_size: The size/resolution of the generated image (e.g., '1K', '2K', '4K'). Defaults to '1K'.
 
@@ -53,13 +56,13 @@ Parameters:
 - `aspect_ratio` (string, optional):
 - `image_size` (string, optional):
 ### `generate_image_nano_banana`
-Get Public Available Stock Symbols from Global Marketplace
+Generate Image With Nano Banana
 
         Args:
             model: The image generation model to use. Defaults to "gemini-2.5-flash-image". Supported Models such as follows Google Gemini Doc, such as 'gemini-3-flash', "gemini-3-pro-image-preview", "gemini-2.5-flash-image", note that nano-banana is the alias name of the Gemini Image Model. Nano banana 3 Pro refers to Gemini 3 pro preview, and Nono Banana 2.5 refers to Gemini 2.5. Unless specified by user to use Gemini 3 model preview, general 'Neno Banana' image models, please use 'gemini-2.5-flash-image' for more stable and fast response.
             prompt: A detailed text description for the image to be generated.
             image_name: The filename for the output image, can be a relative path, such as "./new_gemini_image.png", etc. Defaults to "gemini_output_images.png".
-            output_folder: The optional folder path where the image will be saved. Please use the users' personal directory for this path. If None, uses a default location to the root folder of the server/image
+            output_folder: The optional absolute folder path provided by the user where the image will be saved. Do not use default server locations.
             aspect_ratio: The aspect ratio of the generated image (e.g., '16:9', '1:1', '4:3'), defaults to '16:9'.
             image_size: The size/resolution of the generated image (e.g., '1K', '2K', '4K'), defaults to '1K'.
 

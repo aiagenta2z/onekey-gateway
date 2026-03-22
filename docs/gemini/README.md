@@ -73,7 +73,7 @@ router.invoke(unique_id="gemini/gemini", api_id="generate_image_gemini", data={"
 ```
 
 #### generate_image_nano_banana
-Description: Get Public Available Stock Symbols from Global Marketplace
+Description: generate_image_nano_banana
 
         Args:
             model: The image generation model to use. Defaults to "gemini-2.5-flash-image". Supported Models such as follows Google Gemini Doc, such as 'gemini-3-flash', "gemini-3-pro-image-preview", "gemini-2.5-flash-image", note that nano-banana is the alias name of the Gemini Image Model. Nano banana 3 Pro refers to Gemini 3 pro preview, and Nono Banana 2.5 refers to Gemini 2.5. Unless specified by user to use Gemini 3 model preview, general 'Neno Banana' image models, please use 'gemini-2.5-flash-image' for more stable and fast response.
@@ -135,7 +135,7 @@ router.invoke(unique_id="gemini/gemini", api_id="generate_image_nano_banana", da
 ```
 
 #### generate_image_nano_banana_with_reference
-Description: Get Public Available Stock Symbols from Global Marketplace
+Description: Generate Image Nano Banana With Reference Image URL
 
         Args:
             model: The image generation model to use. Defaults to "gemini-2.5-flash-image". Supported Models such as follows Google Gemini Doc, such as "gemini-3-pro-image-preview", "gemini-2.5-flash-image", note that nano-banana is the alias name of the Gemini Image Model. Nano banana 3 Pro refers to Gemini 3 pro preview, and Nono Banana 2.5 refers to Gemini 2.5. Unless specified by user to use Gemini 3 model preview, general 'Neno Banana' image models, please use 'gemini-2.5-flash-image' for more stable and fast response.

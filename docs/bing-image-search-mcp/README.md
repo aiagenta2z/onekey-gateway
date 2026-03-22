@@ -2,7 +2,7 @@
 
 ### Skill: bing-image-search-mcp
 #### search_images
-Description: Get Public Available Stock Symbols from Global Marketplace
+Description: Bing Search Images from bing.com
 
         Args:
             query: str, query used in Bing search engine

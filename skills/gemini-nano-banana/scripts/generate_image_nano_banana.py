@@ -7,7 +7,9 @@ from ai_agent_marketplace import OneKeyAgentRouter
 
 
 def build_router():
-    onekey = os.getenv("DEEPNLP_ONEKEY_ROUTER_ACCESS", "BETA_TEST_KEY_MARCH_2026")
+    onekey = os.getenv("DEEPNLP_ONEKEY_ROUTER_ACCESS")
+    if not onekey:
+        raise ValueError("DEEPNLP_ONEKEY_ROUTER_ACCESS environment variable is required")
     return OneKeyAgentRouter(onekey=onekey)
 
 
