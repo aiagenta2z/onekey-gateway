@@ -134,16 +134,30 @@ https://us-static.aiagenta2z.com/local/files-wd/user_2177/7629e198-b10c-4a8b-8f6
 <img src="https://raw.githubusercontent.com/aiagenta2z/onekey-agent-router/refs/heads/main/docs/onekey-gateway-example-gemini.jpg" style="width:500px" alt="Image generation">
 
 
+#### Example 3: 3D Generation Step By Step Assembly Charts Build Plans
+
+prompt: 
+
+```bash
+export DEEPNLP_ONEKEY_ROUTER_ACCESS=YOUR_ACCESS_KEY
+onekey agent craftsman-agent/craftsman-agent generate_lego_build_plan '{"prompt":"Build Lego yacht with 5 decks using blue and white bricks","images":[],"mode":"basic"}' --timeout 30000
+```
+
+3D Step by Step Assembly Charts
+
+<img src="https://raw.githubusercontent.com/AI-Hub-Admin/Craftsman-Agent/refs/heads/main/docs/craftsman_agent_2.jpg" style="width:500px" alt="Image generation">
+
+
 ## Tutorial
 
 ## 1. OneKey Agent Router Usage
 
 ### **CLI**
 ```bash
-onekey agent <unique_id> <api_id> <data_json|@file>
-onekey mcp <server_name> [--name config_name]
-onekey llm --provider <provider> --model <model> --messages <json|@file> [--temperature <num>] [--response-format <format>] [--options <json|@file>]
-onekey llm --payload <json|@file>
+onekey agent <unique_id> <api_id> <data_json|@file> [--timeout <ms>]
+onekey mcp <server_name> [--name config_name] [--timeout <ms>]
+onekey llm --provider <provider> --model <model> --messages <json|@file> [--temperature <num>] [--response-format <format>] [--options <json|@file>] [--timeout <ms>]
+onekey llm --payload <json|@file> [--timeout <ms>]
 ```
 
 Supported ids can be found in the table below.
@@ -184,7 +198,7 @@ curl -v -X POST "https://agent.deepnlp.org/agent_router" \
 
 ### **CLI**
 ```bash
-onekey mcp <server_name> [--name config_name]
+onekey mcp <server_name> [--name config_name] [--timeout <ms>]
 ```
 
 Use `onekey mcp` cli to generate the mcp config and copy paste to your clients.
@@ -213,7 +227,7 @@ onekey llm --payload <json|@file>
 ```
 
 ```bash
-npx onekey llm --provider gemini --model gemini-3-flash-preview --messages @messages.json --temperature 0.7 --response-format json
+npx onekey llm --provider gemini --model gemini-3-flash-preview --messages @messages.json --temperature 0.7 --response-format json --timeout 30000
 ```
 
 
@@ -233,7 +247,7 @@ npx onekey llm --provider gemini --model gemini-3-flash-preview --messages @mess
 | Image Generation     | gemini-nano-banana/gemini-nano-banana      [Doc](./docs/gemini-nano-banana/README.md)              | gemini-nano-banana       | generate_image_gemini<br>generate_image_nano_banana<br>generate_image_nano_banana_with_reference<br>ocr_extract_text_from_image<br>list_items_from_image                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 
 | Charts               | mcp-server-chart/mcp-server-chart  [Doc](./docs/mcp-server-chart/README.md)                        | mcp-server-chart         | generate_area_chart<br>generate_bar_chart<br>generate_boxplot_chart<br>generate_column_chart<br>generate_district_map<br>generate_dual_axes_chart<br>generate_fishbone_diagram<br>generate_flow_diagram<br>generate_funnel_chart<br>generate_histogram_chart<br>generate_line_chart<br>generate_liquid_chart<br>generate_mind_map<br>generate_network_graph<br>generate_organization_chart<br>generate_path_map<br>generate_pie_chart<br>generate_pin_map<br>generate_radar_chart<br>generate_sankey_chart<br>generate_scatter_chart<br>generate_spreadsheet<br>generate_treemap_chart<br>generate_venn_chart<br>generate_violin_chart<br>generate_waterfall_chart<br>generate_word_cloud_chart | 
 | Research QA          | perplexity/perplexity  [Doc](./docs/perplexity/README.md)                                          | perplexity               | perplexity_ask<br>perplexity_reason<br>perplexity_research<br>perplexity_search                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | 
-| 3D Generation        | craftsman-agent/craftsman-agent [Doc](./docs/craftsman-agent/README.md)                            | craftsman-agent          | generate_lego_build_plan<br>generate_minecraft_build_plan                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | 
+| 3D Generation        | craftsman-agent/craftsman-agent [Doc](./docs/craftsman-agent/README.md)                            | craftsman-agent          | generate_lego_build_plan<br>generate_minecraft_build_plan<br>generate_tesla_wraps                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | 
 
 
 #### Example 1: Google Maps Search
@@ -271,7 +285,6 @@ onekey agent gemini-nano-banana/gemini-nano-banana generate_image_gemini '{"mode
 ## Return Image url: 
 https://us-static.aiagenta2z.com/local/files-wd/user_2177/7629e198-b10c-4a8b-8f61-5c0a6744cab0/gemini_output_images.png
 ```
-
 
 ## Support Agents
 
@@ -323,6 +336,3 @@ gemini
 [Submit AI Agent](https://www.deepnlp.org/workspace/my_ai_services)
 [Agent Infra Deployment](https://www.deepnlp.org/workspace/deploy)  
 [A2Z Payment SDK](https://www.deepnlp.org/agent/agent-a2z-payment)
-
-
-

@@ -3,6 +3,8 @@
 import { agentRouter, buildMcpConfig, llmRouter, constants } from "./client";
 import { readFileSync } from "fs";
 
+const DEFAULT_TIMEOUT_MS = 30_000;
+
 type ParsedArgs = {
   command?: string;
   positionals: string[];
@@ -96,21 +98,44 @@ function printHelp() {
   const text = `OneKey Gateway CLI
 
 Usage:
-    onekey agent <unique_id> <api_id> <data_json|@file>
-    onekey mcp <server_name> [--name config_name]
-    onekey llm --provider <provider> --model <model> --messages <json|@file> [--temperature <num>] [--response-format <format>] [--options <json|@file>]
-    onekey llm --payload <json|@file>
+    onekey agent <unique_id> <api_id> <data_json|@file> [--timeout <ms>]
+    onekey mcp <server_name> [--name config_name] [--timeout <ms>]
+    onekey llm --provider <provider> --model <model> --messages <json|@file> [--temperature <num>] [--response-format <format>] [--options <json|@file>] [--timeout <ms>]
+    onekey llm --payload <json|@file> [--timeout <ms>]
 
 Flags:
       --key <access_key>           Override DEEPNLP_ONEKEY_ROUTER_ACCESS
+      --timeout <ms>               Request timeout in milliseconds (float, default ${DEFAULT_TIMEOUT_MS})
       --help                       Show help
 
 Examples:
       onekey agent google-maps/google-maps maps_search_places '{"query":"New York City Italian Restaurants"}'
       onekey mcp google-maps
-      onekey llm --provider gemini --model gemini-3-flash-preview --messages @messages.json --temperature 0.7 --response-format json
+      onekey llm --provider gemini --model gemini-3-flash-preview --messages @messages.json --temperature 0.7 --response-format json --timeout 30000
 `;
   process.stdout.write(text);
+}
+
+function parseTimeoutMs(flags: Record<string, string | boolean>): number {
+  const raw = flags.timeout;
+  if (raw === undefined) return DEFAULT_TIMEOUT_MS;
+  if (raw === true) {
+    throw new Error("--timeout requires a value (milliseconds)");
+  }
+  if (typeof raw !== "string") {
+    throw new Error("--timeout must be a number (milliseconds)");
+  }
+
+  const trimmed = raw.trim();
+  const normalized = trimmed.includes(",") && !trimmed.includes(".") ? trimmed.replace(",", ".") : trimmed;
+  const ms = Number(normalized);
+  if (!Number.isFinite(ms)) {
+    throw new Error("--timeout must be a finite number (milliseconds)");
+  }
+  if (ms <= 0) {
+    throw new Error("--timeout must be greater than 0");
+  }
+  return Math.ceil(ms);
 }
 
 async function runAgent(positionals: string[], flags: Record<string, string | boolean>) {
@@ -121,6 +146,7 @@ async function runAgent(positionals: string[], flags: Record<string, string | bo
 
   const accessKey = resolveAccessKey(flags);
   warnIfUsingDefault(accessKey, flags);
+  const timeoutMs = parseTimeoutMs(flags);
 
   const data = parseJsonInput(dataInput, "data");
   const result = await agentRouter(
@@ -129,7 +155,8 @@ async function runAgent(positionals: string[], flags: Record<string, string | bo
       api_id: apiId,
       data
     },
-    accessKey
+    accessKey,
+    { timeoutMs }
   );
 
   process.stdout.write(`${JSON.stringify(result)}\n`);
@@ -162,6 +189,7 @@ async function runLlm(positionals: string[], flags: Record<string, string | bool
 
   const accessKey = resolveAccessKey(flags);
   warnIfUsingDefault(accessKey, flags);
+  const timeoutMs = parseTimeoutMs(flags);
 
   let payload: Record<string, unknown>;
 
@@ -210,7 +238,7 @@ async function runLlm(positionals: string[], flags: Record<string, string | bool
 
   // payload.request_id = requestId;
 
-  const result = await llmRouter(payload as any, accessKey);
+  const result = await llmRouter(payload as any, accessKey, { timeoutMs });
   process.stdout.write(`${JSON.stringify(result)}\n`);
 }
 
