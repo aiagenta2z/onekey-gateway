@@ -6,8 +6,18 @@ from ai_agent_marketplace import OneKeyAgentRouter
 
 
 def build_router():
-    onekey = os.getenv("DEEPNLP_ONEKEY_ROUTER_ACCESS", "BETA_TEST_KEY_MARCH_2026")
-    return OneKeyAgentRouter(onekey=onekey)
+    api_key = os.getenv("DEEPNLP_ONEKEY_ROUTER_ACCESS")
+
+    if not api_key:
+        print("\n" + "=" * 60)
+        print("WARNING: DEMO MODE — NO API KEY SET")
+        print("Using default test key (BETA_TEST_KEY_MARCH_2026)")
+        print("Results may be mocked or inaccurate")
+        print("Set: export DEEPNLP_ONEKEY_ROUTER_ACCESS=your_key")
+        print("=" * 60 + "\n")
+        api_key = "BETA_TEST_KEY_MARCH_2026"
+
+    return OneKeyAgentRouter(onekey=api_key)
 
 
 def parse_location(value):

@@ -11,16 +11,17 @@ ENDPOINT = "https://agent.deepnlp.org/agent_router"
 UNIQUE_ID = "craftsman-agent/craftsman-agent"
 API_ID = "generate_minecraft_build_plan"
 ENV_KEY = "DEEPNLP_ONEKEY_ROUTER_ACCESS"
+DEMO_KEY = "BETA_TEST_KEY_MARCH_2026"
 ONEKEY_HEADER = "X-OneKey"
 
 
 def die_missing_key():
-    sys.stderr.write(
-        "DEEPNLP_ONEKEY_ROUTER_ACCESS is not set. "
-        "Set it before running this script.\n"
-    )
-    sys.stderr.write("Set with: export DEEPNLP_ONEKEY_ROUTER_ACCESS=YOUR_API_KEY\n")
-    return
+    print("\n" + "=" * 60)
+    print("WARNING: DEMO MODE — NO API KEY SET")
+    print("Using default test key (BETA_TEST_KEY_MARCH_2026)")
+    print("Results may be mocked or inaccurate")
+    print("Set: export DEEPNLP_ONEKEY_ROUTER_ACCESS=your_key")
+    print("=" * 60 + "\n")
 
 def validate_image_urls(urls):
     for url in urls:
@@ -68,7 +69,7 @@ def main():
     api_key = os.getenv(ENV_KEY)
     if not api_key:
         die_missing_key()
-        api_key = ""
+        api_key = DEMO_KEY
 
     url = ENDPOINT
     try:

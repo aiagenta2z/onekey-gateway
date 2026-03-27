@@ -5,6 +5,20 @@ const UNIQUE_ID = "craftsman-agent/craftsman-agent";
 const API_ID = "generate_lego_build_plan";
 const ENV_KEY = "DEEPNLP_ONEKEY_ROUTER_ACCESS";
 const ONEKEY_HEADER = "X-OneKey";
+const DEMO_KEY = "BETA_TEST_KEY_MARCH_2026";
+
+function getApiKey(): string {
+  const apiKey = process.env[ENV_KEY];
+  if (apiKey) return apiKey;
+
+  console.log("\n" + "=".repeat(60));
+  console.log("WARNING: DEMO MODE — NO API KEY SET");
+  console.log("Using default test key (BETA_TEST_KEY_MARCH_2026)");
+  console.log("Results may be mocked or inaccurate");
+  console.log("Set: export DEEPNLP_ONEKEY_ROUTER_ACCESS=your_key");
+  console.log("=".repeat(60) + "\n");
+  return DEMO_KEY;
+}
 
 function wrapUserText(text: string): string {
   return `USER_PROMPT_START\n${text}\nUSER_PROMPT_END`;
@@ -54,13 +68,7 @@ async function main() {
     process.exit(1);
   }
 
-  let apiKey = process.env[ENV_KEY];
-  if (!apiKey) {
-    console.error("DEEPNLP_ONEKEY_ROUTER_ACCESS is not set. Set it before running.");
-    console.error("Set with: export DEEPNLP_ONEKEY_ROUTER_ACCESS=YOUR_API_KEY");
-    // process.exit(2);
-    apiKey = "";
-  }
+  const apiKey = getApiKey();
 
   const url = new URL(ENDPOINT);
   validateRefImageUrls(refImageUrl);

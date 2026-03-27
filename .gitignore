@@ -7,4 +7,7 @@ typescript/dist/
 typescript/node_modules
 *node_modules
 typescript/test
+*/__pycache__
+*__pycache__*
+
 

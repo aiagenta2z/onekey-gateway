@@ -5,7 +5,6 @@ import argparse
 import json
 import os
 import sys
-import time
 from urllib import request, parse, error
 
 ENDPOINT = "https://agent.deepnlp.org/agent"
@@ -16,14 +15,12 @@ DEMO_KEY = "BETA_TEST_KEY_MARCH_2026"
 
 
 def warn_missing_key():
-    sys.stderr.write(
-        "DEEPNLP_ONEKEY_ROUTER_ACCESS is not set. "
-        "The API is not free; using demo key after a short wait.\n"
-    )
-    sys.stderr.write(
-        "Set with: export DEEPNLP_ONEKEY_ROUTER_ACCESS=YOUR_API_KEY\n"
-    )
-    time.sleep(2)
+    print("\n" + "=" * 60)
+    print("WARNING: DEMO MODE — NO API KEY SET")
+    print("Using default test key (BETA_TEST_KEY_MARCH_2026)")
+    print("Results may be mocked or inaccurate")
+    print("Set: export DEEPNLP_ONEKEY_ROUTER_ACCESS=your_key")
+    print("=" * 60 + "\n")
 
 
 def build_payload(prompt, ref_image_url, mode):

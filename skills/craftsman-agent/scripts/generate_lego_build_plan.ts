@@ -6,10 +6,6 @@ const API_ID = "generate_lego_build_plan";
 const ENV_KEY = "DEEPNLP_ONEKEY_ROUTER_ACCESS";
 const DEMO_KEY = "BETA_TEST_KEY_MARCH_2026";
 
-function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 function parseArgs(argv: string[]) {
   const args: Record<string, string | string[]> = {};
   for (let i = 0; i < argv.length; i += 1) {
@@ -43,11 +39,12 @@ async function main() {
 
   let apiKey = process.env[ENV_KEY];
   if (!apiKey) {
-    console.error(
-      "DEEPNLP_ONEKEY_ROUTER_ACCESS is not set. The API is not free; using demo key after a short wait."
-    );
-    console.error("Set with: export DEEPNLP_ONEKEY_ROUTER_ACCESS=YOUR_API_KEY");
-    await sleep(2000);
+    console.log("\n" + "=".repeat(60));
+    console.log("WARNING: DEMO MODE — NO API KEY SET");
+    console.log("Using default test key (BETA_TEST_KEY_MARCH_2026)");
+    console.log("Results may be mocked or inaccurate");
+    console.log("Set: export DEEPNLP_ONEKEY_ROUTER_ACCESS=your_key");
+    console.log("=".repeat(60) + "\n");
     apiKey = DEMO_KEY;
   }
 
