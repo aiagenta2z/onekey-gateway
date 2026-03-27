@@ -288,6 +288,96 @@ https://us-static.aiagenta2z.com/local/files-wd/user_2177/7629e198-b10c-4a8b-8f6
 
 ## Support Agents
 
+### Codex
+<details>
+<summary>Onekey Gateway Usage</summary>
+
+#### Install
+```
+npm -g install @aiagenta2z/onekey-gateway
+npx agtm skills add https://github.com/aiagenta2z/onekey-gateway -a codex
+npx skills add https://github.com/aiagenta2z/onekey-gateway
+```
+
+#### Setup Env
+File 
+```
+vim .env
+DEEPNLP_ONEKEY_ROUTER_ACCESS=${your_accesskey}
+```
+Export Env 
+```
+export DEEPNLP_ONEKEY_ROUTER_ACCESS=your_accesskey
+```
+
+#### Run Codex
+```
+codex
+## Show Skills Loaded
+/skills
+## Example 1. Generate a image poster academic/business/professional styles
+/skills Read the README file and relevant project files to understand the project. Then use Gemini Nano Banana to generate a high-quality image (poster) that visually represents the project in a professional, academic, or business style and output to local folder /docs/*.png
+
+### Example 2. Call Google Maps to Search places
+/skills  Use Google Maps Search Best Italian Restaurants in New Yorks
+```
+
+#### Results
+```
+• Updated Plan
+  └ ✔ Scan README and project structure
+    ✔ Summarize project goals and features
+    ✔ Draft poster concept and prompt
+    □ Generate poster image via Gemini
+    □ Save PNG to docs folder
+
+• Ran npx --yes onekey agent gemini-nano-banana/gemini-nano-banana generate_image_gemini @docs/poster_request_gemini.json
+  └ {"success":true,"data":[{"image_path":"/data/python/mcp_tool_use/files-wd/user_1808/9f03533e-af88-4959-b6b4-0131230728b9/Users/rockingdingo/Desktop/workspace/
+    github/aiagenta2z/onekey-gateway-test/docs/onekey_gateway_poster_gemini.png","image_url":"https://us-static.aiagenta2z.com/local/files-wd/
+    user_1808/9f03533e-af88-4959-b6b4-0131230728b9/Users/rockingdingo/Desktop/workspace/github/aiagenta2z/onekey-gateway-test/docs/
+    onekey_gateway_poster_gemini.png","message":"Here is the OneKey Gateway poster you requested.","success":true}],"error":null}
+```
+
+</details>
+
+### Gemini-CLI
+<details>
+<summary>Onekey Gateway Usage</summary>
+
+#### Install
+```
+npm -g install @aiagenta2z/onekey-gateway
+npx agtm skills add https://github.com/aiagenta2z/onekey-gateway -a gemini-cli
+npx skills add https://github.com/aiagenta2z/onekey-gateway
+```
+
+### Setup Env
+File
+```
+vim .env
+DEEPNLP_ONEKEY_ROUTER_ACCESS=${your_accesskey}
+```
+Export Env
+```
+export DEEPNLP_ONEKEY_ROUTER_ACCESS=your_accesskey
+```
+
+#### Run Gemini-CLI
+```
+gemini
+## List if the onekey skills are loaded
+
+/skills list
+## Generate a business/academic/professional poster of the architecture of the project
+Read the README file and relevant project files to understand the project. Then use Onekey Gateway skills of Gemini Nano Banana to generate a high-quality image (poster) that visually represents the project in a professional, academic, or business style and output to local folder /docs/*.png
+
+### Call Google Maps to Search places
+Use onekey gateway skills Google Maps Search Best Italian Restaurants in New Yorks
+```
+
+
+</details>
+
 ### Claude Code
 
 <details>
@@ -302,28 +392,12 @@ claude
 
 </details>
 
-### Codex
+### OpenClaw
+
 <details>
 <summary>Onekey Gateway Usage</summary>
 
 ```shell
-npx agtm skills add https://github.com/aiagenta2z/onekey-gateway -a codex
-codex
-> Use Nano Banana to Generate an Image of academic poster of the project
-> Search top italian restaurants and add to calendars.
-```
-
-</details>
-
-### Gemini-CLI
-<details>
-<summary>Onekey Gateway Usage</summary>
-
-```shell
-npx agtm skills add https://github.com/aiagenta2z/onekey-gateway -a gemini-cli
-gemini
-> Use Nano Banana to Generate an Image of academic poster of the project
-> Search top italian restaurants in New York city and add to calendars.
 ```
 
 </details>
