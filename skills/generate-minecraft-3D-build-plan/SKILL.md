@@ -4,7 +4,7 @@ description: Call Craftsman Agent API OneKey Router to generate a Minecraft 3D s
 env:
   DEEPNLP_ONEKEY_ROUTER_ACCESS:
     required: true
-    description: OneKey Gateway API key (DEEPNLP_ONEKEY_ROUTER_ACCESS)
+    description: OneKey Gateway API key
 dependencies:
   npm:
     - "@aiagenta2z/onekey-gateway"
