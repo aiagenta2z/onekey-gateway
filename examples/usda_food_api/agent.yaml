@@ -1,0 +1,75 @@
+name: "USDA FoodData Central Agent"
+content: "The FoodData Central API provides REST access to FoodData Central (FDC), assisting developers in incorporating nutrient data into their applications. It provides access to Standard Reference (SR) Legacy data, USDA Global Branded Foods Database, Foundation Foods, and FNDDS."
+website: "https://fdc.nal.usda.gov/"
+field: "AI AGENT"
+subfield: "Food & Nutrition"
+content_tag_list: "food,nutrition,usda,fdc,nutrients"
+github: "https://github.com/fdc-nal-usda/fdc-api"
+thumbnail_picture: "https://fdc.nal.usda.gov/img/logo.png"
+upload_image_files: ""
+price_type: "PER_CALL"
+price_per_call_credit: 1.0
+price_fixed_credit: 0.0
+price_subscription: "Free: default rate of 1,000 requests per hour per IP address."
+api_list:
+  - api_id: "get_food_by_id"
+    protocol: "https"
+    description: "Fetches details for one food item by FDC ID"
+    endpoint: "https://api.nal.usda.gov/fdc/v1/food/{fdcId}"
+    method: "GET"
+    params:
+      fdcId: "string"
+      format: "string=full"
+      nutrients: "array[integer]"
+    auth:
+      type: "API_KEY"
+      header: "X-Api-Key"
+      value: "${your_usda_fdc_access_key}"
+
+  - api_id: "get_foods_multiple"
+    protocol: "https"
+    description: "Fetches details for multiple food items using input FDC IDs"
+    endpoint: "https://api.nal.usda.gov/fdc/v1/foods"
+    method: "GET,POST"
+    params:
+      fdcIds: "array[string]"
+      format: "string=full"
+      nutrients: "array[integer]"
+    auth:
+      type: "API_KEY"
+      header: "X-Api-Key"
+      value: "${your_usda_fdc_access_key}"
+
+  - api_id: "list_foods"
+    protocol: "https"
+    description: "Returns a paged list of foods, in the 'abridged' format"
+    endpoint: "https://api.nal.usda.gov/fdc/v1/foods/list"
+    method: "GET,POST"
+    params:
+      dataType: "array[string]"
+      pageSize: "integer=50"
+      pageNumber: "integer=1"
+      sortBy: "string"
+      sortOrder: "string"
+    auth:
+      type: "API_KEY"
+      header: "X-Api-Key"
+      value: "${your_usda_fdc_access_key}"
+
+  - api_id: "search_foods"
+    protocol: "https"
+    description: "Returns a list of foods that matched search (query) keywords"
+    endpoint: "https://api.nal.usda.gov/fdc/v1/foods/search"
+    method: "GET,POST"
+    params:
+      query: "string"
+      dataType: "array[string]"
+      pageSize: "integer=50"
+      pageNumber: "integer=1"
+      sortBy: "string"
+      sortOrder: "string"
+      brandOwner: "string"
+    auth:
+      type: "API_KEY"
+      header: "X-Api-Key"
+      value: "${your_usda_fdc_access_key}"

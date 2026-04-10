@@ -1,0 +1,15 @@
+*.DS_store
+data/
+tests/
+release/
+.idea/
+*.agtm/
+*.npm-cache/
+typescript/dist/
+typescript/node_modules
+*node_modules
+typescript/test
+*/__pycache__
+*__pycache__*
+
+

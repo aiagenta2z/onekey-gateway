@@ -1,0 +1,44 @@
+{
+  "name": "@aiagenta2z/onekey-gateway",
+  "version": "0.1.4",
+  "description": "OneKey Gateway CLI and SDK for routing AI agent, MCP, Skills and LLM requests by DeepNLP x AI Agent A2Z",
+  "license": "MIT",
+  "author": "aiagenta2z",
+  "homepage": "https://www.deepnlp.org/doc/onekey_gateway",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aiagenta2z/onekey-gateway.git"
+  },
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "onekey": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "onekey",
+    "gateway",
+    "agent",
+    "mcp",
+    "llm",
+    "router"
+  ],
+  "dependencies": {
+    "@aiagenta2z/onekey-gateway": "^0.1.0"
+  }
+}

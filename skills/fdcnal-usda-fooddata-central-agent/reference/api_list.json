@@ -1,0 +1,85 @@
+[
+  {
+    "api_id": "agent.deepnlp.org/api/agent/fdcnal/usda-fooddata-central-agent",
+    "endpoint": "",
+    "method": "",
+    "api_type": "AGENT",
+    "auth": {},
+    "description": "",
+    "params": {}
+  },
+  {
+    "api_id": "agent.deepnlp.org/api/agent/fdcnal/usda-fooddata-central-agent/get_foods_multiple",
+    "endpoint": "https://api.nal.usda.gov/fdc/v1/foods",
+    "method": "GET,POST",
+    "api_type": "AGENT",
+    "auth": {
+      "type": "API_KEY",
+      "header": "X-Api-Key",
+      "value_encode": "Nrc9beuTOg2fU8wX10VF8pDCsiYL5JdODn9r/y6vdBrubsFb4q4bU2qGKN1mOv7qju7hfSwELlRHFs0rEDiimnwuvPY="
+    },
+    "description": "Fetches details for multiple food items using input FDC IDs",
+    "params": {
+      "fdcIds": "array[string]",
+      "format": "string=full",
+      "nutrients": "array[integer]"
+    }
+  },
+  {
+    "api_id": "agent.deepnlp.org/api/agent/fdcnal/usda-fooddata-central-agent/get_food_by_id",
+    "endpoint": "https://api.nal.usda.gov/fdc/v1/food/{fdcId}",
+    "method": "GET",
+    "api_type": "AGENT",
+    "auth": {
+      "type": "API_KEY",
+      "header": "X-Api-Key",
+      "value_encode": "uldi1u60/qLyY5IxiFHhhIJPnutIdiogOusvM936LkqDM+wweer2h+nWzYDNBs0zSCkP+pMor+EvrHZMGejro1K8/Ds="
+    },
+    "description": "Fetches details for one food item by FDC ID",
+    "params": {
+      "fdcId": "string",
+      "format": "string=full",
+      "nutrients": "array[integer]"
+    }
+  },
+  {
+    "api_id": "agent.deepnlp.org/api/agent/fdcnal/usda-fooddata-central-agent/list_foods",
+    "endpoint": "https://api.nal.usda.gov/fdc/v1/foods/list",
+    "method": "GET,POST",
+    "api_type": "AGENT",
+    "auth": {
+      "type": "API_KEY",
+      "header": "X-Api-Key",
+      "value_encode": "ySDhZe/M7ZAaGuVXPFs0Vhc/0QPxALStuukDzy9gEsn9/44uy7v2u3jObzEbz6apg9T1VIL+U4cQk85nE/JH2GxMVsc="
+    },
+    "description": "Returns a paged list of foods, in the 'abridged' format",
+    "params": {
+      "dataType": "array[string]",
+      "pageSize": "integer=50",
+      "pageNumber": "integer=1",
+      "sortBy": "string",
+      "sortOrder": "string"
+    }
+  },
+  {
+    "api_id": "agent.deepnlp.org/api/agent/fdcnal/usda-fooddata-central-agent/search_foods",
+    "endpoint": "https://api.nal.usda.gov/fdc/v1/foods/search",
+    "method": "GET,POST",
+    "api_type": "AGENT",
+    "auth": {
+      "type": "API_KEY",
+      "header": "X-Api-Key",
+      "value_encode": "yg++JRa/DykHm2NW4rGmqz8oEnT+muHGnRc+zvvyY9xTC+6ZC/O7EIlWqDTodEjAVbXxLL4ZmAuAL7YDE1nzcH4M878="
+    },
+    "description": "Returns a list of foods that matched search (query) keywords",
+    "params": {
+      "query": "string",
+      "dataType": "array[string]",
+      "pageSize": "integer=50",
+      "pageNumber": "integer=1",
+      "sortBy": "string",
+      "sortOrder": "string",
+      "brandOwner": "string"
+    }
+  }
+]

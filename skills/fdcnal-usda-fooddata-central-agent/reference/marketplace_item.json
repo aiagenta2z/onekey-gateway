@@ -1,0 +1,101 @@
+{
+  "content_name": "USDA FoodData Central Agent",
+  "publisher_id": "pub-fdcnal",
+  "detail_url": "https://www.deepnlp.org/store/ai-agent/skills/pub-fdcnal/usda-fooddata-central-agent",
+  "website": "https://fdc.nal.usda.gov/",
+  "github": "https://github.com/fdc-nal-usda/fdc-api",
+  "review_cnt": "1",
+  "api_list": [
+    {
+      "api_id": "agent.deepnlp.org/api/agent/fdcnal/usda-fooddata-central-agent",
+      "endpoint": "",
+      "method": "",
+      "api_type": "AGENT",
+      "auth": {},
+      "description": "",
+      "params": {}
+    },
+    {
+      "api_id": "agent.deepnlp.org/api/agent/fdcnal/usda-fooddata-central-agent/get_foods_multiple",
+      "endpoint": "https://api.nal.usda.gov/fdc/v1/foods",
+      "method": "GET,POST",
+      "api_type": "AGENT",
+      "auth": {
+        "type": "API_KEY",
+        "header": "X-Api-Key",
+        "value_encode": "Nrc9beuTOg2fU8wX10VF8pDCsiYL5JdODn9r/y6vdBrubsFb4q4bU2qGKN1mOv7qju7hfSwELlRHFs0rEDiimnwuvPY="
+      },
+      "description": "Fetches details for multiple food items using input FDC IDs",
+      "params": {
+        "fdcIds": "array[string]",
+        "format": "string=full",
+        "nutrients": "array[integer]"
+      }
+    },
+    {
+      "api_id": "agent.deepnlp.org/api/agent/fdcnal/usda-fooddata-central-agent/get_food_by_id",
+      "endpoint": "https://api.nal.usda.gov/fdc/v1/food/{fdcId}",
+      "method": "GET",
+      "api_type": "AGENT",
+      "auth": {
+        "type": "API_KEY",
+        "header": "X-Api-Key",
+        "value_encode": "uldi1u60/qLyY5IxiFHhhIJPnutIdiogOusvM936LkqDM+wweer2h+nWzYDNBs0zSCkP+pMor+EvrHZMGejro1K8/Ds="
+      },
+      "description": "Fetches details for one food item by FDC ID",
+      "params": {
+        "fdcId": "string",
+        "format": "string=full",
+        "nutrients": "array[integer]"
+      }
+    },
+    {
+      "api_id": "agent.deepnlp.org/api/agent/fdcnal/usda-fooddata-central-agent/list_foods",
+      "endpoint": "https://api.nal.usda.gov/fdc/v1/foods/list",
+      "method": "GET,POST",
+      "api_type": "AGENT",
+      "auth": {
+        "type": "API_KEY",
+        "header": "X-Api-Key",
+        "value_encode": "ySDhZe/M7ZAaGuVXPFs0Vhc/0QPxALStuukDzy9gEsn9/44uy7v2u3jObzEbz6apg9T1VIL+U4cQk85nE/JH2GxMVsc="
+      },
+      "description": "Returns a paged list of foods, in the 'abridged' format",
+      "params": {
+        "dataType": "array[string]",
+        "pageSize": "integer=50",
+        "pageNumber": "integer=1",
+        "sortBy": "string",
+        "sortOrder": "string"
+      }
+    },
+    {
+      "api_id": "agent.deepnlp.org/api/agent/fdcnal/usda-fooddata-central-agent/search_foods",
+      "endpoint": "https://api.nal.usda.gov/fdc/v1/foods/search",
+      "method": "GET,POST",
+      "api_type": "AGENT",
+      "auth": {
+        "type": "API_KEY",
+        "header": "X-Api-Key",
+        "value_encode": "yg++JRa/DykHm2NW4rGmqz8oEnT+muHGnRc+zvvyY9xTC+6ZC/O7EIlWqDTodEjAVbXxLL4ZmAuAL7YDE1nzcH4M878="
+      },
+      "description": "Returns a list of foods that matched search (query) keywords",
+      "params": {
+        "query": "string",
+        "dataType": "array[string]",
+        "pageSize": "integer=50",
+        "pageNumber": "integer=1",
+        "sortBy": "string",
+        "sortOrder": "string",
+        "brandOwner": "string"
+      }
+    }
+  ],
+  "rating": "5.0",
+  "description": "The FoodData Central API provides REST access to FoodData Central (FDC), assisting developers in incorporating nutrient data into their applications. It provides access to Standard Reference (SR) Legacy data, USDA Global Branded Foods Database, Foundation Foods, and FNDDS.",
+  "ext_info": "{\"publisher_id\":\"pub-fdcnal\",\"content_name\":\"USDA FoodData Central Agent\",\"price_subscription_free_quota\":\"\",\"price_fixed_credit\":\"0\",\"final_thumbnail_files\":\"\",\"visible_to_paid_only\":\"off\",\"content\":\"The FoodData Central API provides REST access to FoodData Central (FDC), assisting developers in incorporating nutrient data into their applications. It provides access to Standard Reference (SR) Legacy data, USDA Global Branded Foods Database, Foundation Foods, and FNDDS.\",\"price_per_call_credit\":\"1\",\"final_background_files\":\"\",\"price_per_call_unit_orig\":\"USD\",\"subfield\":\"Skills\",\"price_per_call_value_orig\":\"\",\"price_per_call_method_orig\":\"/1k calls\",\"price_fixed_unit_orig\":\"USD\",\"api\":\"\",\"content_tag_list\":\"food,nutrition,usda,fdc,nutrients\",\"price_subscription_yearly_credit\":\"25000\",\"website\":\"https://fdc.nal.usda.gov/\",\"github\":\"https://github.com/fdc-nal-usda/fdc-api\",\"content_id\":\"faee8b97e2fd4b7a8dd663c97a667724\",\"price_subscription_monthly_quota\":\"\",\"final_system_files\":\"\",\"upload_files_system\":\"\",\"field\":\"AI AGENT\",\"price_subscription_monthly_credit\":\"25000\",\"price_type\":\"PER_CALL\",\"price_subscription_yearly_quota\":\"\",\"price_fixed_value_orig\":\"\",\"price_fixed_method_orig\":\"each\"}",
+  "subfield": "Skills",
+  "field": "AI AGENT",
+  "id": "fdcnal/usda-fooddata-central-agent",
+  "content_tag_list": "food,nutrition,usda,fdc,nutrients",
+  "thumbnail_picture": "https://fdc.nal.usda.gov/img/logo.png"
+}

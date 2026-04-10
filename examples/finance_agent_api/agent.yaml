@@ -1,0 +1,70 @@
+publisher_id: "finance-agent"
+name: "Finance Agent"
+content: "The Finance Agent to get stock information from global stock market"
+website: "https://www.my_first_agent.com"
+field: "AI AGENT"
+subfield: "Finance"
+content_tag_list: "coding,python"
+github: "https://github.com/aiagenta2z/FinanceAgent"
+thumbnail_picture: "https://avatars.githubusercontent.com/u/242328252?s=200&v=4"
+upload_image_files: ""
+price_type: "PER_CALL"
+price_per_call_credit: 10.0
+price_fixed_credit: 0.0
+price_subscription: "Basic: your basic plan introduction, Advanced: Your Advanced Plan introduction, etc."
+api_list:
+  - api_id: "get_us_stock_market"
+    description: "Get US stock Market data"
+    endpoint: "https://financeagent.aiagenta2z.com/financeagent/v1/api/get_us_stock_market"
+    protocol: "http"
+    method: "GET"
+    params:
+      symbol_list: "array[string]"
+      market: "string=US"
+    auth:
+      type: "API_KEY"
+      header: "X-API-Key"
+      value: "REGISTRY_API_GET_KEY"
+
+  - api_id: "get_hk_stock_market"
+    description: "Get Hong Kong stock market data"
+    endpoint: "https://financeagent.aiagenta2z.com/financeagent/v1/api/get_hk_stock_market"
+    protocol: "http"
+    method: "GET"
+    params:
+      symbol_list: "array[string]"
+      market: "string=HK"
+    auth:
+      type: "API_KEY"
+      header: "X-API-Key"
+      value: "REGISTRY_API_GET_KEY"
+
+  - api_id: "get_cn_stock_market"
+    description: "Get China stock market data"
+    endpoint: "https://financeagent.aiagenta2z.com/financeagent/v1/api/get_cn_stock_market"
+    protocol: "http"
+    method: "GET"
+    auth:
+      type: "API_KEY"
+      header: "X-API-Key"
+      value: "REGISTRY_API_GET_KEY"
+
+  - api_id: "get_uk_stock_market"
+    description: "Get UK stock market data"
+    endpoint: "https://financeagent.aiagenta2z.com/financeagent/v1/api/get_uk_stock_market"
+    protocol: "http"
+    method: "GET"
+    auth:
+      type: "API_KEY"
+      header: "X-API-Key"
+      value: "REGISTRY_API_GET_KEY"
+
+  - api_id: "get_india_stock_market"
+    description: "Get India stock market data"
+    endpoint: "https://financeagent.aiagenta2z.com/financeagent/v1/api/get_india_stock_market"
+    protocol: "http"
+    method: "GET"
+    auth:
+      type: "API_KEY"
+      header: "X-API-Key"
+      value: "REGISTRY_API_GET_KEY"

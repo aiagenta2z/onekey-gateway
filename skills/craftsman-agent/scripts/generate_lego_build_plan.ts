@@ -1,0 +1,92 @@
+#!/usr/bin/env node
+
+const ENDPOINT = "https://agent.deepnlp.org/agent";
+const UNIQUE_ID = "craftsman-agent/craftsman-agent";
+const API_ID = "generate_lego_build_plan";
+const ENV_KEY = "DEEPNLP_ONEKEY_ROUTER_ACCESS";
+const DEMO_KEY = "BETA_TEST_KEY_MARCH_2026";
+
+function parseArgs(argv: string[]) {
+  const args: Record<string, string | string[]> = {};
+  for (let i = 0; i < argv.length; i += 1) {
+    const token = argv[i];
+    if (
+      token === "--prompt" ||
+      token === "--mode" ||
+      token === "--images" ||
+      token === "--ref-image-url"
+    ) {
+      const value = argv[i + 1];
+      i += 1;
+      if (token === "--images" || token === "--ref-image-url") {
+        const list = (args["--images"] as string[]) || [];
+        list.push(value);
+        args["--images"] = list;
+      } else {
+        args[token] = value;
+      }
+    }
+  }
+
+  return {
+    prompt: (args["--prompt"] as string) || "",
+    mode: (args["--mode"] as string) || "basic",
+    images: (args["--images"] as string[]) || [],
+  };
+}
+
+async function main() {
+  const { prompt, mode, images } = parseArgs(process.argv.slice(2));
+  if (!prompt) {
+    console.error("Missing --prompt");
+    process.exit(1);
+  }
+
+  let apiKey = process.env[ENV_KEY];
+  if (!apiKey) {
+    console.log("\n" + "=".repeat(60));
+    console.log("WARNING: DEMO MODE — NO API KEY SET");
+    console.log("Using default test key (BETA_TEST_KEY_MARCH_2026)");
+    console.log("Results may be mocked or inaccurate");
+    console.log("Set: export DEEPNLP_ONEKEY_ROUTER_ACCESS=your_key");
+    console.log("=".repeat(60) + "\n");
+    apiKey = DEMO_KEY;
+  }
+
+  const url = new URL(ENDPOINT);
+  url.searchParams.set("onekey", apiKey);
+
+  const payload = {
+    unique_id: UNIQUE_ID,
+    api_id: API_ID,
+    data: {
+      prompt,
+      images,
+      mode,
+    },
+  };
+
+  const response = await fetch(url.toString(), {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  const text = await response.text();
+  if (!response.ok) {
+    console.error(`HTTP ${response.status}: ${text}`);
+    process.exit(1);
+  }
+
+  try {
+    const json = JSON.parse(text);
+    console.log(JSON.stringify(json, null, 2));
+  } catch {
+    console.log(text);
+  }
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
